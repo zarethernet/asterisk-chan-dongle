@@ -142,6 +142,7 @@ static int at_response_ok (struct pvt* pvt, at_res_t res)
 			case CMD_AT_CSCA:
 			case CMD_AT_CLCC:
 			case CMD_AT_CLIR:
+			case CMD_AT_PORTSEL:
 				ast_debug (3, "[%s] %s sent successfully\n", PVT_ID(pvt), at_cmd2str (ecmd->cmd));
 				break;
 
@@ -334,6 +335,7 @@ static int at_response_error (struct pvt* pvt, at_res_t res)
 
 			/* not critical errors */
 			case CMD_AT_U2DIAG:
+			case CMD_AT_PORTSEL:
 			case CMD_AT_CCWA_SET:
 			case CMD_AT_CCWA_STATUS:
 				ast_log (LOG_ERROR, "[%s] Command '%s' failed\n", PVT_ID(pvt), at_cmd2str (ecmd->cmd));
