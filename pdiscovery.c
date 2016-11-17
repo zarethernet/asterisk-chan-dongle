@@ -68,7 +68,8 @@ static const struct pdiscovery_device device_ids[] = {
 //	{ 0x12d1, 0x1465, { 2, 1, /* 0 */ } },		/* K3520 */
 	{ 0x12d1, 0x140c, { 3, 2, /* 0 */ } },		/* E17xx */
 	{ 0x12d1, 0x1436, { 4, 3, /* 0 */ } },		/* E1750 */
-	{ 0x12d1, 0x1506, { 1, 2, /* 0 */ } },		/* E171 firmware 21.x : thanks Sergey Ivanov */
+//	{ 0x12d1, 0x1506, { 1, 2, /* 0 */ } },		/* E171 firmware 21.x : thanks Sergey Ivanov */
+	{ 0x12d1, 0x1506, { 0, 2, /* 0 */ } },		/* Huawei Technologies Co., Ltd. E398 LTE/UMTS/GSM Modem/Networkcard */
 };
 
 static struct discovery_cache cache;
