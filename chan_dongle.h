@@ -131,7 +131,7 @@ typedef struct pvt
 	struct timeval		dtmf_end_time;			/*!< time of end of last DTMF digit */
 
 	int			timeout;			/*!< used to set the timeout for data */
-#define DATA_READ_TIMEOUT	10000				/* 10 seconds */
+#define DATA_READ_TIMEOUT	30000				/* 30 seconds */
 
 	unsigned long		channel_instanse;		/*!< number of channels created on this device */
 	unsigned int		rings;				/*!< ring/ccwa  number distributed to at_response_clcc() */
