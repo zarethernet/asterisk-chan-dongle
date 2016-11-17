@@ -136,6 +136,7 @@ EXPORT_DEF int at_enque_initialization(struct cpvt* cpvt, at_cmd_t from_command)
 	static const char cmd22[] = "AT+CPMS=\"ME\",\"ME\",\"ME\"\r";
 	static const char cmd23[] = "AT+CNMI=2,1,0,0,0\r";
 	static const char cmd24[] = "AT+CSQ\r";
+	static const char cmd25[] = "AT^PORTSEL=1\r";
 
 	static const at_queue_cmd_t st_cmds[] = {
 		ATQ_CMD_DECLARE_ST(CMD_AT, cmd_at),
@@ -169,6 +170,7 @@ EXPORT_DEF int at_enque_initialization(struct cpvt* cpvt, at_cmd_t from_command)
 			/* pvt->initialized = 1 after successful of CMD_AT_CNMI */
 		ATQ_CMD_DECLARE_ST(CMD_AT_CNMI, cmd23),		/* New SMS Notification Setting +CNMI=[<mode>[,<mt>[,<bm>[,<ds>[,<bfr>]]]]] */
 		ATQ_CMD_DECLARE_ST(CMD_AT_CSQ, cmd24),		/* Query Signal quality */
+		ATQ_CMD_DECLARE_ST(CMD_AT_PORTSEL, cmd25),	/* Proactive event report port => 1 = Modem port; 0 = PCUIPort */
 		};
 	unsigned in, out;
 	int begin = -1;
